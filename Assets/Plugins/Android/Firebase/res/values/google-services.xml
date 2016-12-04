@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="firebase_database_url" translatable="false">https://virtualboard-5b7ad.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">303691547034</string>
+  <string name="google_storage_bucket" translatable="false">virtualboard-5b7ad.appspot.com</string>
+  <string name="google_api_key" translatable="false">AIzaSyCtMeqvh65xiQxJsHriacK4S5GYkSA_jXc</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCtMeqvh65xiQxJsHriacK4S5GYkSA_jXc</string>
+  <string name="google_app_id" translatable="false">1:303691547034:android:633a0caee0b05053</string>
+  <string name="default_web_client_id" translatable="false">303691547034-64rse41vc1eq652l7r0h4n8vv34oivj7.apps.googleusercontent.com</string>
+</resources>

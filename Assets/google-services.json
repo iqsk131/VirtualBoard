@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "303691547034",
+    "firebase_url": "https://virtualboard-5b7ad.firebaseio.com",
+    "project_id": "virtualboard-5b7ad",
+    "storage_bucket": "virtualboard-5b7ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303691547034:android:633a0caee0b05053",
+        "android_client_info": {
+          "package_name": "com.shumiq.virtualboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303691547034-64rse41vc1eq652l7r0h4n8vv34oivj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtMeqvh65xiQxJsHriacK4S5GYkSA_jXc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
