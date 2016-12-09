@@ -71,7 +71,9 @@ public class BoardUpdater : MonoBehaviour {
 			int y=int.Parse(args.Snapshot.Key.Substring(6,4));
 			//Debug.Log("Added: " + x + ", " + y);
 			GameObject pixel = GameObject.Instantiate(Resources.Load("Pixel")) as GameObject;
-			pixel.transform.position = new Vector3(x,0,y);
+			pixel.transform.SetParent(this.transform,false);
+			pixel.transform.localScale = new Vector3(1.0f/Width,1.0f/Height,1.0f);
+			pixel.transform.localPosition = new Vector3(((x-1)*0.01f/Width)-(0.005f-(0.005f/Width)),((y-1)*0.01f/Height)-(0.005f-(0.005f/Height)),-0.01f);
 			Board[x,y]=true;
 			if(GameObject.Find("p" + x + "," + y) == null){
 				pixel.name="p" + x + "," + y;
