@@ -69,7 +69,7 @@ public class BoardUpdater : MonoBehaviour {
 			}
 			int x=int.Parse(args.Snapshot.Key.Substring(1,4));
 			int y=int.Parse(args.Snapshot.Key.Substring(6,4));
-			Debug.Log("Added: " + x + ", " + y);
+			//Debug.Log("Added: " + x + ", " + y);
 			GameObject pixel = GameObject.Instantiate(Resources.Load("Pixel")) as GameObject;
 			pixel.transform.position = new Vector3(x,0,y);
 			Board[x,y]=true;
@@ -84,7 +84,7 @@ public class BoardUpdater : MonoBehaviour {
 			}
 			int x=int.Parse(args.Snapshot.Key.Substring(1,4));
 			int y=int.Parse(args.Snapshot.Key.Substring(6,4));
-			Debug.Log("Removed: " + x + ", " + y);
+			//Debug.Log("Removed: " + x + ", " + y);
 			Board[x,y]=false;
 			if(GameObject.Find("p" + x + "," + y) != null){
 				GameObject.Destroy(GameObject.Find("p" + x + "," + y));
