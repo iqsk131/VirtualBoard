@@ -13,6 +13,8 @@ using UnityEngine.UI;
 // startup.
 public class BoardUpdater : MonoBehaviour {
 
+	[SerializeField] private GameObject Pointer;
+
 	private const string DatabaseUrl = "https://virtualboard-5b7ad.firebaseio.com/";
 	private DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
 	public static BoardUpdater Instance;
@@ -27,6 +29,7 @@ public class BoardUpdater : MonoBehaviour {
 	void Start() {
 		Instance = this;
 		Board = new bool[Width,Height];
+		Pointer.transform.localScale = new Vector3(1.0f/Width,1.0f/Height,1.0f);
 
 		Debug.Log("Start!!");
 
@@ -110,6 +113,25 @@ public class BoardUpdater : MonoBehaviour {
 			if(GameObject.Find("p" + x + "," + y) == null){
 				pixel.name="p" + x + "," + y;
 			}
+		}
+	}
+
+	public void SetPointerPosition(double x, double y){
+		SetPointerPosition((int) x, (int) y);
+	}
+
+	public void SetPointerPosition(int x, int y){
+		Pointer.transform.localPosition = new Vector3(((x-1)*0.01f/Width)-(0.005f-(0.005f/Width)),((y-1)*0.01f/Height)-(0.005f-(0.005f/Height)),-0.01f);
+	}
+
+	public void SetPointerActive(bool IsActive){
+		if(IsActive){
+			Pointer.transform.FindChild("Red").gameObject.SetActive(false);
+			Pointer.transform.FindChild("Green").gameObject.SetActive(true);
+		}
+		else{
+			Pointer.transform.FindChild("Red").gameObject.SetActive(true);
+			Pointer.transform.FindChild("Green").gameObject.SetActive(false);
 		}
 	}
 }
